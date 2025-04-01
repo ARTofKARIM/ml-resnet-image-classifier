@@ -1,0 +1,16 @@
+data:
+  image_size: [224, 224]
+  batch_size: 32
+  validation_split: 0.2
+  num_classes: 10
+model:
+  architecture: "resnet50"
+  pretrained: true
+  freeze_base: true
+  dense_units: [256, 128]
+  dropout: 0.5
+training:
+  epochs: 30
+  learning_rate: 0.001
+  lr_scheduler: "cosine"
+  early_stopping_patience: 5
